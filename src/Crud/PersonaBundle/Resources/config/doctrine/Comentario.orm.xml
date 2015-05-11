@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="Crud\PersonaBundle\Entity\Comentario" table="comentario">
+    <indexes>
+      <index name="id_video_2" columns="id_video"/>
+    </indexes>
+    <unique-constraints>
+      <unique-constraint name="id_video" columns="id_video"/>
+    </unique-constraints>
+    <id name="idComentario" type="integer" column="id_comentario">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="comentario" type="string" column="comentario" length="140" nullable="false"/>
+    <many-to-one field="idVideo" target-entity="Video">
+      <join-columns>
+        <join-column name="id_video" referenced-column-name="id_video"/>
+      </join-columns>
+    </many-to-one>
+  </entity>
+</doctrine-mapping>

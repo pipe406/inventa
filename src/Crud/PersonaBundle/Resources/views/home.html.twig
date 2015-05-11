@@ -1,0 +1,13 @@
+{% extends "CrudPersonaBundle::layout.html.twig" %}
+
+{% block body %}
+    {% if mensage is defined %}
+        <h2 style="color:red;">{{mensage}}</h2>
+    {% endif %}
+    <nav>
+        <a href="{{ path('crear')  }}" > Crear Video </a><br>
+        <a href="{{ path('modificar')  }}" > Modificar Video </a><br>
+        <a href="{{ path('eliminar')  }}" > Eliminar Video </a><br>
+    </nav>
+    {{ render(controller('CrudPersonaBundle:Gestion:listarPersonas')) }}
+{% endblock %}

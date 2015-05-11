@@ -1,0 +1,9 @@
+{% extends "::base.html.twig" %}
+
+{% block title %}Document {{name}}{% endblock %}
+
+{% block body %}
+<h1>Document {{name}}:</h1>
+<div>{{content}}</div>
+<a href="{{path('m7_editor_homepage')}}"><--Back</a>
+{% endblock %}

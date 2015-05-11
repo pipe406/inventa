@@ -1,0 +1,20 @@
+{% extends "CrudPersonaBundle::layout.html.twig" %}
+
+{% block title %}CrudPersonaBundle:Gestion:modificar{% endblock %}
+
+{% block body %}
+<h1>Modificar video</h1>
+<div id="personas">
+    <ul>
+        {% for p in lista %}
+        <li>
+            <a href="{{ path('modPersona', {'id_video' : p.idVideo})  }}" > 
+                {{p.nombre}} 
+            </a>
+            
+        </li>
+        {% endfor %}
+    </ul>
+</div>
+
+{% endblock %}

@@ -1,0 +1,23 @@
+m7_editor_homepage:
+    path:     /
+    defaults: { _controller: M7EditorBundle:Manager:home }
+
+new_doc:
+    path:     /newDoc
+    defaults: { _controller: M7EditorBundle:Manager:newDoc }
+
+open_doc:
+    path:     /openDoc/{docname}
+    defaults: { _controller: M7EditorBundle:Manager:openDoc }
+
+save_doc:
+    path:     /saveDoc
+    defaults: { _controller: M7EditorBundle:Manager:saveDoc }
+    
+view_doc:
+    path:     /viewDoc/{docname}
+    defaults: { _controller: M7EditorBundle:Manager:viewDoc }
+
+list_doc:
+    path:     /listDocs
+    defaults: { _controller: M7EditorBundle:Manager:listDocs }

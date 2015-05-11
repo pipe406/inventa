@@ -1,0 +1,10 @@
+{% extends "::base.html.twig" %}
+
+{% block title %}Editor de Text{% endblock %}
+
+{% block body %}
+<h1>Benvingut a la pàgina de modificació de documents</h1>
+El Document que esteu modificant es diu: {{name}}
+{{form(formulari)}}
+<a href="{{path('m7_editor_homepage')}}"><--Back</a>
+{% endblock %}

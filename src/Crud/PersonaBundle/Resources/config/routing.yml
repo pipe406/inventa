@@ -1,0 +1,29 @@
+crud_persona_homepage:
+    path:     /hello/{name}
+    defaults: { _controller: CrudPersonaBundle:Default:index }
+
+homepage:
+    path:     /
+    defaults: { _controller: CrudPersonaBundle:Default:home }
+
+crear:
+    path:     /crear
+    defaults: { _controller: CrudPersonaBundle:Gestion:crear }
+
+leer:
+    path:     /leer/{id_video}
+    defaults: { _controller: CrudPersonaBundle:Gestion:leer }
+
+modificar:
+    path:     /modificar
+    defaults: { _controller: CrudPersonaBundle:Gestion:modificar }
+
+eliminar:
+    path:     /eliminar
+    defaults: { _controller: CrudPersonaBundle:Gestion:eliminar }
+
+modPersona:
+    path:     /modPersona/{id_video}
+    defaults: { _controller: CrudPersonaBundle:Gestion:modPersona }
+    
+    

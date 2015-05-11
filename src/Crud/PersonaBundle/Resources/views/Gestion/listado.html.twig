@@ -1,0 +1,15 @@
+ {% if lista is defined %}
+  <div id="personas">
+     
+    <ul>
+        {% for p in lista %}
+        <li>
+            <a href="{{ path('leer', {'id_video' : p.idVideo})  }}" > 
+                {{p.nombre}} 
+            </a>
+            
+        </li>
+        {% endfor %}
+    </ul>
+</div>
+{% endif %}

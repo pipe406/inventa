@@ -1,0 +1,4 @@
+services:
+#    crud_persona.example:
+#        class: Crud\PersonaBundle\Example
+#        arguments: [@service_id, "plain_value", %parameter%]

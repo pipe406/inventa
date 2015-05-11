@@ -1,0 +1,62 @@
+{% extends '::base.html.twig' %}
+{% block body %}
+    <h1>Benvinguts a l'Examen de M7. </h1>
+Es tracta de realitzar un editor de text senzill. Només tindrem Quatre Accions principals i un llistat:
+<ul>
+    <li>
+        <a href="{{path('new_doc')}}">Nou Document</a>
+    </li>
+    <li>
+        <a href="{{path('list_doc')}}">Obrir Document per Editar-lo</a>
+    </li>
+    <li>
+        <a href="{{path('list_doc')}}">Obrir Document per Veure-ho</a>
+    </li>   
+    <li>
+        Guardar un Document: guarda un document obert en <b>mode edició.</b>
+    </li>
+</ul>
+
+
+<h2>Explicacions de les diferents accions:</h2>
+<h3>Nou Document</h3>
+Creació d'un nou document.
+Es demana un nom de document i es crea. Si existeix sobreescriu el document.
+<h3>Obrir document per editar-lo</h3>
+Es mostren els documents que s'han creat i mitjançant un enllaç ens permet editar el document enllaçat.
+<p>La edició no permet canviar el nom del Document. </p>
+<p>Podem editar els documents i introduïr la informació que volguem, però tenim unes etiquetes pròpies que
+    ens permetran visualitzar el document amb estil (no es poden utilitzar les etiquetes html).</p>
+<b>Restricció:</b> Malauradament, el professor està cansat del XML, així que es premiarà idear un altre mètode d'etiquetes.
+<p>Les funcionalitats a implementar amb etiquetes son les següents:</p>
+<ul>
+    <li>
+        <b>Negreta:</b>a l'hora de visualitzar el document es traduirà per l'etiqueta HTML corresponent
+    </li>
+    <li>
+        <b>Subrallat:</b>a l'hora de visualitzar el document es traduirà per l'etiqueta HTML corresponent
+    </li>
+    <li>
+        <b>Cursiva:</b>a l'hora de visualitzar el document es traduirà per l'etiqueta HTML corresponent
+    </li>
+    <li>
+        <b>Color de la lletra:</b>a l'hora de visualitzar el document es traduirà per l'etiqueta <pre>&lt;span style="color:XXX"&gt; &lt;/span&gt;</pre>
+    </li>
+    <li>
+        <b>Llistes No numerades:</b>a l'hora de visualitzar el document es traduirà per l'etiqueta HTML corresponent
+    </li>
+    <li><b>Item de llista:</b>a l'hora de visualitzar el document es traduirà per l'etiqueta HTML corresponent
+    <li><b>Capçaleres:</b></li> S'ha de poder inserir etiquetes de capçalera, com la H1 de HTML. Amb dues és suficient.
+    <li><b>Enllaç:</b></li> S'ha de poder enllaçar a llocs d'internet.
+</ul>
+<h3>Obrir document per Veure-ho</h3>
+Es mostren els documents que s'han creat i mitjançant un enllaç ens permet veure el document enllaçat.
+Aquest documents es visualitzen en format HTML, es a dir, s'ha de traduir les etiquetes pròpies a format HTML.
+Al final del document visualitzat ha d'aparèixer un enllaç que vagi a la pàgina anterior per poder veure un altre document. 
+<h3>Guardar document</h3>
+Utiltitzant la classe Serializer es procedeix a guardar el document.
+
+<h3>Llistar documents</h3>
+Dóna un llistat amb tots els documents creats (els que podem trobar al directori database).Cadascun d'aquest fitxers té un enllaç per la seva posterior edició o visualització.
+<p></p><p></p>
+{% endblock %}

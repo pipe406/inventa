@@ -1,0 +1,55 @@
+{% extends "CrudPersonaBundle::layout.html.twig" %}
+
+{% block title %}Leer VIdeo{% endblock %}
+
+{% block body %}
+    <h1>Datos del Video</h1>
+    <table border="1">
+         <tr>
+            <th>video</th>
+            <td><video src="{{asset('/bundles/crudpersona/images/'~ persona.nombre ~'')}}" controls>
+                </video></td>
+        </tr> 
+        <tr>
+            <th>nombre</th>
+            <td>{{persona.nombre}}</td>
+        </tr>
+        <tr>
+            <th>descripcion</th>
+            <td>{{persona.descripcion}}</td>
+        </tr>
+        <tr>
+            <th>id Video</th>
+            <td>{{persona.idVideo}}</td>
+        </tr>
+       
+        <tr>
+            <th>visualizaciones</th>
+            <td>{{persona.numValoraciones}}</td>
+        </tr>  
+         <tr>
+            <th>total puntos</th>
+            <td>{{persona.totalPuntos}}</td>
+        </tr>  
+       
+         <tr>
+            <th>puntos</th>
+            <td>    {{ form(formulario)  }}</td>
+        </tr>
+    </table>
+        
+          {% if formulario2 is defined %}
+     <table border="1">
+         <tr>
+            <th>comentarios</th>
+            <td>
+            {{ form(formulario2)  }}    
+                
+            </td>
+        </tr>     
+        </table> 
+            {%endif%}
+        
+        
+    <a href="{{ path('homepage')  }}" > <-back </a>
+{% endblock %}

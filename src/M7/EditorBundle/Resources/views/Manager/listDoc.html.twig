@@ -1,0 +1,20 @@
+{% extends "::base.html.twig" %}
+
+{% block title %}Editor de Text{% endblock %}
+
+{% block body %}
+    <h1>S'ha escollit la opció de '{{target_link}}' Document</h1>
+<div id="elements">
+    <ul>
+        {% for docname in lista %}
+        <li>
+            <a href="{{path('list_doc')}}" > 
+                {{docname}} 
+            </a>
+            
+        </li>
+        {% endfor %}
+    </ul>
+</div>
+<a href="{{path('m7_editor_homepage')}}"><--Back</a>
+{% endblock %}
