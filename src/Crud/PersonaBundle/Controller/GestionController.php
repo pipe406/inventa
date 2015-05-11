@@ -8,6 +8,7 @@ use Crud\PersonaBundle\Entity\Comentario;
 use Symfony\Component\HttpFoundation\Request;
 
 class GestionController extends Controller {
+echo "estoy haciendo un cambio a felipe";
 
     public function crearAction(Request $request) {
         $video = new Video();
