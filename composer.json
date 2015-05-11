@@ -1,7 +1,7 @@
 {
     "name": "symfony/framework-standard-edition",
     "license": "MIT",
-    "type": "project",
+    "tsadasdasdasdasdype": "project",
     "description": "The \"Symfony Standard Edition\" distribution",
     "autoload": {
         "psr-0": { "": "src/" }
